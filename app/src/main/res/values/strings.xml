@@ -3,4 +3,6 @@
     <string name="agenda_title">AGENDA</string>
     <string name="eginbeharrekoak_btn">EGINBEHARREKOAK</string>
     <string name="gehitu_BTN">GEHITU</string>
+    <string name="izenburua_eginbeharra">Izenburua</string>
+    <string name="deskripzioa_eginbeharra">Deskripzioa</string>
 </resources>
