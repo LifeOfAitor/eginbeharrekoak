@@ -6,8 +6,4 @@ data class Eginbeharra(
     var egina: Boolean
 
 ) {
-    //checkbox-a klikatzean aldatuko da egina-ren egoera
-    fun eginda() {
-        egina = !egina
-    }
 }

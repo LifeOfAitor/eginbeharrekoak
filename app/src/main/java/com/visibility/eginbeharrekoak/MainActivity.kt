@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.visibility.eginbeharrekoak.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +18,14 @@ class MainActivity : AppCompatActivity() {
         binding.buttonEgitekoak.setOnClickListener {
             ikusiEgitekoak()
         }
+        binding.buttonGehitu.setOnClickListener {
+            gehituActivityra()
+        }
+    }
+
+    private fun gehituActivityra() {
+        val intent = Intent(this, GehituActivity::class.java)
+        startActivity(intent)
     }
 
     private fun ikusiEgitekoak() {

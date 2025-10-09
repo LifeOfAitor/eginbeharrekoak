@@ -5,4 +5,9 @@
     <string name="gehitu_BTN">GEHITU</string>
     <string name="izenburua_eginbeharra">Izenburua</string>
     <string name="deskripzioa_eginbeharra">Deskripzioa</string>
+    <string name="izenburuaTitle">IZENBURUA</string>
+    <string name="eginbeharraren_izenburua_jarriHint">Eginbeharraren izenburua jarri</string>
+    <string name="deskripzioaTitle">DESKRIPZIOA</string>
+    <string name="eginbeharraren_desskripzioaText">Eginbeharraren desskripzioa...</string>
+    <string name="sortuBtn">SORTU</string>
 </resources>
