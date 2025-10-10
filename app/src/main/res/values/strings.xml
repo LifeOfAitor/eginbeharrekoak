@@ -8,6 +8,7 @@
     <string name="izenburuaTitle">IZENBURUA</string>
     <string name="eginbeharraren_izenburua_jarriHint">Eginbeharraren izenburua jarri</string>
     <string name="deskripzioaTitle">DESKRIPZIOA</string>
-    <string name="eginbeharraren_desskripzioaText">Eginbeharraren desskripzioa...</string>
+    <string name="eginbeharraren_desskripzioaText">Eginbeharraren deskripzioa…</string>
     <string name="sortuBtn">SORTU</string>
+    <string name="eginbeharrakTitle">EGINBAHARRAK</string>
 </resources>

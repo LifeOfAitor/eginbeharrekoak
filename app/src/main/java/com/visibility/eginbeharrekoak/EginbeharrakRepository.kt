@@ -5,6 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.IOException
 
+//hainbat activity erabiliko dituzten funtzioak hemen gordetzea ideia ona da
 class EginbeharrakRepository(private val context: Context) {
 
     private val gson = Gson()

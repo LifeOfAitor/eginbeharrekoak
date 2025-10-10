@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.visibility.eginbeharrekoak.databinding.ActivityGehituBinding
+import java.util.Locale
 
 
 class GehituActivity : AppCompatActivity() {
@@ -47,6 +48,9 @@ class GehituActivity : AppCompatActivity() {
 
         // 4. Gorde zerrenda osoa eta eguneratua fitxategian
         repository.guardarEginbeharrak(unekoEginbeharrak)
+
+        Toast.makeText(this, "$eginbeharIzena eginbeharra gehituta".uppercase(Locale.ROOT), Toast.LENGTH_SHORT)
+            .show()
 
         // 5. Itxi Activity hau eta itzuli aurrekora (EginbeharrekoakActivity)
         finish()
