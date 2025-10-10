@@ -3,10 +3,7 @@ package com.visibility.eginbeharrekoak
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import com.visibility.eginbeharrekoak.databinding.ActivityEginbeharrekoakBinding
-import java.io.IOException
 
 class EginbeharrekoakActivity : AppCompatActivity() {
 
@@ -29,6 +26,8 @@ class EginbeharrekoakActivity : AppCompatActivity() {
 
         // Eginbeharren zerrenda kargatu, lehenik bilatzen du dispositiboaren fitxategi lokalean
         // eta ez badago, assets-en dagoena kargatzen du
+        //Baina lehenengo repository inizializatu behar da lateinit daukalako
+        repository = EginbeharrakRepository(this)
         eginbeharrenLista = repository.kargatuEginbeharrak()
 
         // Adapterra sortu eta callback-a definitu:
