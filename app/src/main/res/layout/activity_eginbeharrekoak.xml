@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/wallpaper"
-    tools:context=".EginbeharrekoakActivity">
+    tools:context=".EginbeharrekoakActivity"
+    android:background="@color/gray_200">
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -28,6 +28,15 @@
         android:clipToPadding="false"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_eginbeharra" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_gehitu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/gray_900"
+        app:tint="@color/white"
+        android:layout_margin="16dp"/>
 
 </LinearLayout>
 

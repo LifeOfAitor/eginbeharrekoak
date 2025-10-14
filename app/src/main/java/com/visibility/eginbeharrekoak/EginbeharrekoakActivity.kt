@@ -1,5 +1,6 @@
 package com.visibility.eginbeharrekoak
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -45,11 +46,20 @@ class EginbeharrekoakActivity : AppCompatActivity() {
                 // Zerrenda eguneratua gorde fitxategi lokalean JSON formatuan
                 repository.guardarEginbeharrak(eginbeharrenLista)
             }
+
         }
 
         // RecyclerView konfiguratu: Layout manager-a eta adapterra ezarri
         binding.recyclerViewProjects.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewProjects.adapter = adapter
+        binding.buttonGehitu.setOnClickListener {
+            gehituActivityra()
+        }
+    }
+
+    private fun gehituActivityra() {
+        val intent = Intent(this, GehituActivity::class.java)
+        startActivity(intent)
     }
 }
 

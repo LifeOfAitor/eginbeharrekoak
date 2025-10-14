@@ -18,16 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding.buttonEgitekoak.setOnClickListener {
             ikusiEgitekoak()
         }
-        binding.buttonGehitu.setOnClickListener {
-            gehituActivityra()
-        }
     }
-
-    private fun gehituActivityra() {
-        val intent = Intent(this, GehituActivity::class.java)
-        startActivity(intent)
-    }
-
     private fun ikusiEgitekoak() {
         val intent = Intent(this, EginbeharrekoakActivity::class.java)
         startActivity(intent)
