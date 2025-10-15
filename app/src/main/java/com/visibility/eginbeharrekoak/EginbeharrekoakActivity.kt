@@ -2,6 +2,7 @@ package com.visibility.eginbeharrekoak
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.visibility.eginbeharrekoak.databinding.ActivityEginbeharrekoakBinding
@@ -28,7 +29,17 @@ class EginbeharrekoakActivity : AppCompatActivity(), OnEginbeharraMoveListener {
                 adapter.notifyItemRemoved(index)
                 repository.guardarEginbeharrak(eginbeharrenLista)
             }
-        }, this) // this: OnEginbeharraMoveListener
+        }, onEginbeharraItemClick = { eginbeharra ->
+            EditatuEginbeharraDialog(eginbeharra) { berria ->
+                // Zerrendan eguneratu
+                val index = eginbeharrenLista.indexOf(eginbeharra)
+                if (index != -1) {
+                    eginbeharrenLista[index] = berria
+                    adapter.notifyItemChanged(index)
+                    repository.guardarEginbeharrak(eginbeharrenLista)
+                }
+            }.show(supportFragmentManager, "EditatuEginbeharra")
+        },this) // this: OnEginbeharraMoveListener
 
         binding.recyclerViewProjects.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewProjects.adapter = adapter

@@ -12,6 +12,7 @@ import com.visibility.eginbeharrekoak.databinding.ItemEginbeharraBinding
 class EginbeharraAdapter(
     private val eginbeharrak: MutableList<Eginbeharra>, // Zerrenda mutagarria, elementuak kendu edo mugitzeko
     private val onEginbeharraClick: (Eginbeharra) -> Unit, // Checkbox-a klik egitean deitzen den lambda
+    private val onEginbeharraItemClick: (Eginbeharra) -> Unit, // Izenburua eta deskripzioa click egitean
     private val moveListener: OnEginbeharraMoveListener // "Gora" eta "Behera" botoientzako listener
 ) : RecyclerView.Adapter<EginbeharraAdapter.EginbeharraViewHolder>() {
 
@@ -60,6 +61,10 @@ class EginbeharraAdapter(
         holder.binding.checkboxDone.setOnClickListener {
             eginbeharra.egina = holder.binding.checkboxDone.isChecked
             onEginbeharraClick(eginbeharra)
+        }
+        // Izenburua + deskripzioa layoutaren klik listener-a
+        holder.binding.layoutTexts.setOnClickListener {
+            onEginbeharraItemClick(eginbeharra)
         }
     }
 
