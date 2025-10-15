@@ -11,4 +11,6 @@
     <string name="eginbeharraren_desskripzioaText">Eginbeharraren deskripzioa…</string>
     <string name="sortuBtn">SORTU</string>
     <string name="eginbeharrakTitle">EGINBAHARRAK</string>
+    <string name="button_gora">button_gora</string>
+    <string name="button_behera">button_behera</string>
 </resources>
