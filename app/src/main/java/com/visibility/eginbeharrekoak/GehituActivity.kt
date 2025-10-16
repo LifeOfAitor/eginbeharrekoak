@@ -1,11 +1,15 @@
 package com.visibility.eginbeharrekoak
 
+import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.visibility.eginbeharrekoak.databinding.ActivityGehituBinding
-import java.util.Locale
+import android.view.Gravity
+import android.widget.ImageView
+import android.widget.TextView
 
 
 class GehituActivity : AppCompatActivity() {
@@ -49,11 +53,33 @@ class GehituActivity : AppCompatActivity() {
         // 4. Gorde zerrenda osoa eta eguneratua fitxategian
         repository.guardarEginbeharrak(unekoEginbeharrak)
 
-        Toast.makeText(this, "$eginbeharIzena eginbeharra gehituta".uppercase(Locale.ROOT), Toast.LENGTH_SHORT)
-            .show()
+        showCustomToast(this, "$eginbeharIzena eginbeharra gehituta")
+
 
         // 5. Itxi Activity hau eta itzuli aurrekora (EginbeharrekoakActivity)
         finish()
     }
+
+    //custom toast erabiltzeko, horrela mezua hobeto egongo da
+    fun showCustomToast(context: Context, message: String) {
+        val inflater = LayoutInflater.from(context)
+        val layout = inflater.inflate(R.layout.custom_toast, null)
+
+        // ezarri ikonoa eta textua
+        val icon = layout.findViewById<ImageView>(R.id.toast_icon)
+        icon.setImageResource(R.drawable.icc_added)
+
+        val text = layout.findViewById<TextView>(R.id.toast_text)
+        text.text = message
+
+        // Crear y mostrar Toast
+        with(Toast(context)) {
+            duration = Toast.LENGTH_SHORT
+            view = layout
+            setGravity(Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL, 0, 100)
+            show()
+        }
+    }
+
 
 }
