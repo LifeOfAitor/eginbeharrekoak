@@ -2,7 +2,7 @@ package com.visibility.eginbeharrekoak
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.visibility.eginbeharrekoak.databinding.ActivityEginbeharrekoakBinding
@@ -18,6 +18,7 @@ class EginbeharrekoakActivity : AppCompatActivity(), OnEginbeharraMoveListener {
         super.onCreate(savedInstanceState)
         binding = ActivityEginbeharrekoakBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        enableEdgeToEdge()
 
         repository = EginbeharrakRepository(this)
         eginbeharrenLista = repository.kargatuEginbeharrak()
