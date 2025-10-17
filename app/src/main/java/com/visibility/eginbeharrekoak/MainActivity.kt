@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     // egiteko azkarra sortzeko (deskripziorik gabe)
     private fun sortuEginbeharAzkarra() {
         val eginbeharIzena = binding.inputNewTask.editText?.text.toString().trim()
-        val eginbeharDeskripzioa = "" // Dejar la descripción vacía o default
+        val eginbeharDeskripzioa = "" // "azkarra" denez, utzi deskripzioa hutsik
 
         if (eginbeharIzena.isNotBlank()) {
             gehituEginbeharBerria(eginbeharIzena, eginbeharDeskripzioa)
@@ -90,5 +90,14 @@ class MainActivity : AppCompatActivity() {
         repository.guardarEginbeharrak(unekoEginbeharrak)
 
         ikusiEgitekoak()
+    }
+
+    // honekin mezua ez da gorria geratuko pantaia honetara bueltatuko garenean. Berria bezala
+    // geratuko da
+    override fun onResume(){
+        super.onResume()
+        binding.inputNewTask.error = null
+        binding.inputNewTask.editText?.text?.clear()
+        binding.inputNewTask.clearFocus()
     }
 }

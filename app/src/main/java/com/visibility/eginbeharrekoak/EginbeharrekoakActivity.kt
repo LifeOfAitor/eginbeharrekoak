@@ -18,7 +18,7 @@ class EginbeharrekoakActivity : AppCompatActivity(), OnEginbeharraMoveListener {
         super.onCreate(savedInstanceState)
         binding = ActivityEginbeharrekoakBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        enableEdgeToEdge()
+        //enableEdgeToEdge() -> nire mugikor pertsonalean okerrago ikusten da horrela
 
         repository = EginbeharrakRepository(this)
         eginbeharrenLista = repository.kargatuEginbeharrak()
