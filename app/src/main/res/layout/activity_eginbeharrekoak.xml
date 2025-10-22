@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="@string/eginbeharrakTitle"
+            android:paddingTop="30dp"
             app:titleTextColor="@color/white"
             app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
             android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
